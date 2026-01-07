@@ -3,20 +3,37 @@
 - What is a relational database?
  - Name some common RDBMS platforms/vendors
  - What is SQL?
+   - SQL is a standard developed by Oracle to define how relational database systems should be implmented.
+   - Different implementations include PostGres, Maria, Oracle, MySQL, MS-SQL (T-SQL), SQLite
+   - Structured Query Language, commonly used with relational databases to manipulate the database, inserting deleting, modifying schema, controlling access
+   - is a declarative language (and is missing procedural components without additional features)
  - What are the sub-languages of SQL?
  - What keywords are associated with DML?
+   - data manipulation language - insert, delete, update - how we maniopulate data (not schema, not querying)
  - What keywords are associated with DDL?
+   - data definition language - create table, create index -how we define schema
  - What keywords are associated with DCL?
+   - Data control language - GRANT, REVOKE - set permissions and control users
  - What keywords are associated with TCL?
+   - Transaction Control Language - COMMIT, SAVEPOINT, ROLLBACK, BEGIN - this is how we define "units of work" to be committed atomically as a transaction
  - What keywords are associated with DQL?
+   - Data Query Language - SELECT, WHERE, HAVING, JOIN - this is querying data from the tables into result sets
  - What is a result set?
  - What is normalization?
+   - guiding advice you can use when designing your schema.
+   - there are a handful of forms, where most folks only really care about maybe 3-4 of these.
+   - 1: primary key and atomicity
+   - 2: if you have a composite key, we don't want information in any rows to rely on part of that key
+   - 3: we don;t want transitive dependencies
  - What are the normal forms, and to what level do we usually comply to?
  - What is multiplicity?
+   - one-to-many, one-to-one, many-to-many, and will require a junction table
  - What is a primary key?
  - What is a natural key?
  - What is surrogate key?
  - What is a composite key?
+ - super key
+ - candiate key
  - What is a foreign key?
  - What is referential integrity?
  - What is the difference between a scalar and an aggregate function?
@@ -24,6 +41,7 @@
  - What is the difference between a union and a join?
  - Under what circumstances can two result sets be unioned?
  - What sorts of joins exist in SQL?
+   - LEFT RIGHT OUTER? INNER CROSS SELF NATURAL FULL
  - What is a transaction?
  - What are the properties of a transaction?
  - What are the transaction isolation levels?
@@ -31,6 +49,9 @@
  - What is a phantom-read? What isolation level(s) resolve this phenonmenon?
  - What is a non-repeatable read? What isolation level(s) resolve this phenonmenon?
  - Is SQL considered a procedural, declarative, or functional language?
+   - procedural? - control the order and number of procedures (instructions)
+   - declarative? - declarative vs imperitave - declare what you want and the language will assemble instructions
+   - functional? - no side effects, possible to have stateless funcitons
  - How can you select all of the entries in a table (ex: Users) including all columns?
  - What is a WHERE clause used for?
  - How can you sort the entries in your result set by a particular column?
@@ -45,4 +66,6 @@
  - Are DML statements in JDBC automatically committed? Is this a problem?
  - When would you use a CallableStatement?
  - What is SQL injection?
+   - A way to pass executable SQL into the process in order get it executed, usually maliciously.
+   - We can avoid this by sanitizing user input, JDBC has PreparedStatement which involved a sanitization step when parameterizing the SQL statement
  - Why is it recommended to use a PreparedStatement over a Statement?
