@@ -1,11 +1,16 @@
 # QC Study
+Relevant study guides can be found in this directory.
 
-## Current QC Priorities:
- - [Java Basics]
- - [Java Advanced]
- - [SQL]
- - [REST]
- - [Javalin]
- - [HTTP]
- - [Git & Agile]
+Official QC question banks can be found [here](./Official%20QC%20Question%20Banks%20(Super%20Secret)/).
+
+## Current QC Priorities (& study guides):
+ - Java Basics
+ - Java Advanced
+ - SQL
+ - REST
+ - Javalin
+ - HTTP
+ - Git & Agile
+
+
 
