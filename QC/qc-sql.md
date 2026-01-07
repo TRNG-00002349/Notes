@@ -41,6 +41,7 @@
  - What is the difference between a union and a join?
  - Under what circumstances can two result sets be unioned?
  - What sorts of joins exist in SQL?
+   - LEFT RIGHT OUTER? INNER CROSS SELF NATURAL FULL
  - What is a transaction?
  - What are the properties of a transaction?
  - What are the transaction isolation levels?
@@ -48,6 +49,9 @@
  - What is a phantom-read? What isolation level(s) resolve this phenonmenon?
  - What is a non-repeatable read? What isolation level(s) resolve this phenonmenon?
  - Is SQL considered a procedural, declarative, or functional language?
+   - procedural? - control the order and number of procedures (instructions)
+   - declarative? - declarative vs imperitave - declare what you want and the language will assemble instructions
+   - functional? - no side effects, possible to have stateless funcitons
  - How can you select all of the entries in a table (ex: Users) including all columns?
  - What is a WHERE clause used for?
  - How can you sort the entries in your result set by a particular column?
@@ -62,4 +66,6 @@
  - Are DML statements in JDBC automatically committed? Is this a problem?
  - When would you use a CallableStatement?
  - What is SQL injection?
+   - A way to pass executable SQL into the process in order get it executed, usually maliciously.
+   - We can avoid this by sanitizing user input, JDBC has PreparedStatement which involved a sanitization step when parameterizing the SQL statement
  - Why is it recommended to use a PreparedStatement over a Statement?
