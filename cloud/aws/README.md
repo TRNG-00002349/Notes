@@ -1,7 +1,7 @@
 # Amazon Web Services
 
 ## Notes
- - [Intro to AWS, Regions, and Availability Zones](intro-aws.mdmd)
+ - [Intro to AWS, Regions, and Availability Zones](intro-aws.md)
  - [AWS Netowkring and Security](networking-and-security.md)
  - [S3](S3.md)
  - [EC2](ec2.md)
